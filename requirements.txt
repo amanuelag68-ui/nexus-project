@@ -1,0 +1,41 @@
+# NEXUS — AI-Powered IT Support Multi-Agent System
+# Requirements file
+#
+# Demo mode (no API keys needed):
+#   pip install -r requirements.txt
+#
+# Production mode (add API keys to .env):
+#   pip install -r requirements.txt
+#   pip install anthropic openai pinecone-client
+
+# ── Core (demo runs on these alone) ─────────────────────────────
+numpy>=1.26.0
+pandas>=2.0.0
+matplotlib>=3.8.0
+
+# ── Web / API layer ──────────────────────────────────────────────
+flask>=3.0.0
+requests>=2.31.0
+
+# ── Data validation ──────────────────────────────────────────────
+typing_extensions>=4.9.0
+
+# ── Production LLM (optional — swap MockLLM) ────────────────────
+# anthropic>=0.25.0           # Claude claude-sonnet-4-20250514
+# openai>=1.12.0              # text-embedding-ada-002 embeddings
+
+# ── Production vector store (optional) ──────────────────────────
+# pinecone-client>=3.0.0      # Pinecone vector DB
+
+# ── Production workflow integrations (optional) ──────────────────
+# jira>=3.5.0                 # Jira REST client
+# slack-sdk>=3.27.0           # Slack Bolt / MCP
+# pagerduty>=2.0.0            # PagerDuty alerts
+
+# ── Security / PII redaction (optional) ─────────────────────────
+# presidio-analyzer>=2.2.0    # Microsoft Presidio PII detection
+# presidio-anonymizer>=2.2.0
+
+# ── Dev / Testing ────────────────────────────────────────────────
+# pytest>=8.0.0
+# pytest-cov>=5.0.0
